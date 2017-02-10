@@ -10,7 +10,7 @@
     "cordova-plugin-console": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-console@1.0.5"
+            "id": "cordova-plugin-console"
         },
         "is_top_level": true,
         "variables": {}
@@ -26,7 +26,7 @@
     "cordova-plugin-device": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-device@1.1.4"
+            "id": "cordova-plugin-device"
         },
         "is_top_level": true,
         "variables": {}
@@ -34,7 +34,7 @@
     "cordova-plugin-splashscreen": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-splashscreen@~4.0.1"
+            "id": "cordova-plugin-splashscreen@4.0.1"
         },
         "is_top_level": true,
         "variables": {}
@@ -42,9 +42,25 @@
     "ionic-plugin-keyboard": {
         "source": {
             "type": "registry",
-            "id": "ionic-plugin-keyboard@~2.2.1"
+            "id": "ionic-plugin-keyboard"
         },
         "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-contacts": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-contacts"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-compat": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-compat"
+        },
+        "is_top_level": false,
         "variables": {}
     }
 }
