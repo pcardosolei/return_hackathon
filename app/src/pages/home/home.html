@@ -1,36 +1,30 @@
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>
-      Notifications
+      Home
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-
-    <ion-list no-lines>
-
-        <ion-item>
-          <ion-label>Notify me at: </ion-label>
-          <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="notifyTime" (ionChange)="timeChange($event)"></ion-datetime>
-        </ion-item>
-
-        <ion-item>
-            <ion-label>on the following days:</ion-label>
-        </ion-item>
-
-        <ion-item *ngFor="let day of days">
-            <ion-label>{{day.title}}</ion-label>
-            <ion-checkbox [(ngModel)]="day.checked" color="primary"></ion-checkbox>
-        </ion-item>
-
-    </ion-list>
-
+    <ion-slides class="slideShow">
+        <ion-slide>
+          <ion-img class="whiteBackground slideShow" src="./assets/images/velhos1.png">
+          </ion-img>
+        </ion-slide>
+        <ion-slide>
+          <ion-img class="whiteBackground slideShow"  src="./assets/images/velhos2.png">
+          </ion-img>
+        </ion-slide>
+        <ion-slide>
+          <ion-img class="whiteBackground slideShow"  src="./assets/images/velhos3.png">
+          </ion-img>
+        </ion-slide>
+    </ion-slides>
 </ion-content>
-
-<ion-footer>
-
-    <button (click)="addNotifications()" ion-button color="primary" full>Schedule</button>
-    <button (click)="cancelAll()" ion-button color="danger" full>Leave me alone!</button>
-
+<ion-footer >
+    <ion-toolbar class="footerHome">
+      <ion-title class="whiteLettering" text-center (click)="goToOtherPage()">Avançar</ion-title>
+  </ion-toolbar>
 </ion-footer>
+

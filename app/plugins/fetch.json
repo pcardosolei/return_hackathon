@@ -49,8 +49,9 @@
     },
     "de.appplant.cordova.plugin.local-notification": {
         "source": {
-            "type": "registry",
-            "id": "de.appplant.cordova.plugin.local-notification"
+            "type": "git",
+            "url": "https://github.com/katzer/cordova-plugin-local-notifications",
+            "subdir": "."
         },
         "is_top_level": true,
         "variables": {}
@@ -59,6 +60,30 @@
         "source": {
             "type": "registry",
             "id": "cordova-plugin-app-event"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-background-mode": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-background-mode@~0.7.2"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-contacts": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-contacts"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-compat": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-compat"
         },
         "is_top_level": false,
         "variables": {}
