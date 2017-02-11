@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavParams, NavController, Platform, AlertController } from 'ionic-angular';
-import { LocalNotifications } from 'ionic-native';
 import * as moment from 'moment';
 
 declare var cordova:any;
@@ -13,7 +12,6 @@ declare var cordova:any;
 export class NotifPage {
 
     notifyTime: any;
-    notifications: any[] = [];
     days: any[];
     chosenHours: number;
     chosenMinutes: number;
@@ -21,8 +19,6 @@ export class NotifPage {
     tempo:number;
     nome:any;
 
-    // --
-    module:any;
 
     constructor(public navCtrl: NavController,public navParams: NavParams, public platform: Platform, public alertCtrl: AlertController) {
 
@@ -62,7 +58,6 @@ export class NotifPage {
       for(let day of this.days){
 
           if(day.checked){
-
               let firstNotificationTime = new Date();
               let dayDifference = day.dayCode - currentDay;
 
@@ -74,28 +69,16 @@ export class NotifPage {
               firstNotificationTime.setHours(this.chosenHours);
               firstNotificationTime.setMinutes(this.chosenMinutes);
 
-              let now = new Date().getTime();
-              this.tempo = firstNotificationTime.getTime()-now;
               cordova.plugins.notification.local.schedule({
-                text: this.qty,
-                at: this.tempo,
-                every: 'week',
+                title: this.nome,
+                text: ""+this.qty,
+                date: firstNotificationTime,
+                repeat: 'weekly',
                 led: "FF0000",
                 sound: null
               });
           }
        }
-    }
-
-    cancelAll(){
-      LocalNotifications.cancelAll();
-
-      let alert = this.alertCtrl.create({
-          title: 'Notifications cancelled',
-          buttons: ['Ok']
-      });
-
-      alert.present();
     }
 
 }
